@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
 
-    private static int getLongestSubstringWithoutRepeatingCharacters(String text) {
+    private static int getLongestSubstringLenghtWithoutRepeatingCharacters(String text) {
         if (Objects.isNull(text)) {
             return 0;
         }
@@ -19,7 +19,7 @@ public class Main {
         }
         if (text.length() > maxLenght) {
             text = text.substring(1);
-            int maxLenghtRecursive = getLongestSubstringWithoutRepeatingCharacters(text);
+            int maxLenghtRecursive = getLongestSubstringLenghtWithoutRepeatingCharacters(text);
             if (maxLenghtRecursive > maxLenght)
                 return maxLenghtRecursive;
         }
@@ -27,9 +27,9 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(getLongestSubstringWithoutRepeatingCharacters(null));
-        System.out.println(getLongestSubstringWithoutRepeatingCharacters("ABDEFGABEF"));
-        System.out.println(getLongestSubstringWithoutRepeatingCharacters("BBBB"));
-        System.out.println(getLongestSubstringWithoutRepeatingCharacters("GEEKSFORGEEKS"));
+        System.out.println(getLongestSubstringLenghtWithoutRepeatingCharacters(null));
+        System.out.println(getLongestSubstringLenghtWithoutRepeatingCharacters("ABDEFGABEF"));
+        System.out.println(getLongestSubstringLenghtWithoutRepeatingCharacters("BBBB"));
+        System.out.println(getLongestSubstringLenghtWithoutRepeatingCharacters("GEEKSFORGEEKS"));
     }
 }
